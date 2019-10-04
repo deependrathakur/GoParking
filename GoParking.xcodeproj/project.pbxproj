@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A905FEDA575ECA8B94AD2D7 /* Pods_GoParking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C341623E0DA42BF9CD4C99 /* Pods_GoParking.framework */; };
+		B7044DA62319242500672F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7044DA52319242500672F00 /* AppDelegate.swift */; };
+		B7044DAB2319242500672F00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7044DA92319242500672F00 /* Main.storyboard */; };
+		B7044DAE2319242500672F00 /* GoParking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7044DAC2319242500672F00 /* GoParking.xcdatamodeld */; };
+		B7044DB02319242800672F00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7044DAF2319242800672F00 /* Assets.xcassets */; };
+		B7044DB32319242800672F00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7044DB12319242800672F00 /* LaunchScreen.storyboard */; };
+		B7044DC92319242900672F00 /* GoParkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7044DC82319242900672F00 /* GoParkingUITests.swift */; };
+		B7044DDA23192B8A00672F00 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7044DD923192B8A00672F00 /* Home.storyboard */; };
+		B7044DEE2319489F00672F00 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7044DEB2319489F00672F00 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		B7044DEF2319489F00672F00 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7044DEC2319489F00672F00 /* TPKeyboardAvoidingScrollView.m */; };
+		B7044DF623194B9400672F00 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7044DF523194B9400672F00 /* LoginViewController.swift */; };
+		B7044DF823194BA400672F00 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7044DF723194BA400672F00 /* SignUpViewController.swift */; };
+		B7044DFB23194E0E00672F00 /* AppShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7044DFA23194E0E00672F00 /* AppShareData.swift */; };
+		B71DCED9232A46B700D1B89A /* GoParkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7044DBD2319242800672F00 /* GoParkingTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7044DBA2319242800672F00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7044D9A2319242500672F00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7044DA12319242500672F00;
+			remoteInfo = GoParking;
+		};
+		B7044DC52319242800672F00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7044D9A2319242500672F00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7044DA12319242500672F00;
+			remoteInfo = GoParking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76C341623E0DA42BF9CD4C99 /* Pods_GoParking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoParking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BF80E46E5464142CE7BE45F /* Pods-GoParking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoParking.release.xcconfig"; path = "Target Support Files/Pods-GoParking/Pods-GoParking.release.xcconfig"; sourceTree = "<group>"; };
+		B7044DA22319242500672F00 /* GoParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7044DA52319242500672F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7044DAA2319242500672F00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7044DAD2319242500672F00 /* GoParking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoParking.xcdatamodel; sourceTree = "<group>"; };
+		B7044DAF2319242800672F00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7044DB22319242800672F00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7044DB42319242800672F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7044DB92319242800672F00 /* GoParkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoParkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7044DBD2319242800672F00 /* GoParkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoParkingTests.swift; sourceTree = "<group>"; };
+		B7044DBF2319242800672F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7044DC42319242800672F00 /* GoParkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoParkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7044DC82319242900672F00 /* GoParkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoParkingUITests.swift; sourceTree = "<group>"; };
+		B7044DCA2319242900672F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7044DD923192B8A00672F00 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B7044DEA2319489F00672F00 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		B7044DEB2319489F00672F00 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		B7044DEC2319489F00672F00 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		B7044DED2319489F00672F00 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		B7044DF0231948C200672F00 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		B7044DF523194B9400672F00 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B7044DF723194BA400672F00 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B7044DFA23194E0E00672F00 /* AppShareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppShareData.swift; sourceTree = "<group>"; };
+		BDF90EC5D088BF49C1CBDA5D /* Pods-GoParking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoParking.debug.xcconfig"; path = "Target Support Files/Pods-GoParking/Pods-GoParking.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7044D9F2319242500672F00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A905FEDA575ECA8B94AD2D7 /* Pods_GoParking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7044DB62319242800672F00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7044DC12319242800672F00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADF5F6166FB59ACE3A819EA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76C341623E0DA42BF9CD4C99 /* Pods_GoParking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7044D992319242500672F00 = {
+			isa = PBXGroup;
+			children = (
+				B7044DA42319242500672F00 /* GoParking */,
+				B7044DBC2319242800672F00 /* GoParkingTests */,
+				B7044DC72319242800672F00 /* GoParkingUITests */,
+				B7044DA32319242500672F00 /* Products */,
+				C43A63CC77C15DABB1AB3A31 /* Pods */,
+				ADF5F6166FB59ACE3A819EA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B7044DA32319242500672F00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DA22319242500672F00 /* GoParking.app */,
+				B7044DB92319242800672F00 /* GoParkingTests.xctest */,
+				B7044DC42319242800672F00 /* GoParkingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7044DA42319242500672F00 /* GoParking */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DD72319247200672F00 /* AppDelegate */,
+				B7044DF123194B3700672F00 /* AppController */,
+				B7044DD62319245500672F00 /* Screens */,
+				B7044DF923194DE400672F00 /* Helper */,
+				B7044DAF2319242800672F00 /* Assets.xcassets */,
+				B7044DB42319242800672F00 /* Info.plist */,
+				B7044DAC2319242500672F00 /* GoParking.xcdatamodeld */,
+			);
+			path = GoParking;
+			sourceTree = "<group>";
+		};
+		B7044DBC2319242800672F00 /* GoParkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DBD2319242800672F00 /* GoParkingTests.swift */,
+				B7044DBF2319242800672F00 /* Info.plist */,
+			);
+			path = GoParkingTests;
+			sourceTree = "<group>";
+		};
+		B7044DC72319242800672F00 /* GoParkingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DC82319242900672F00 /* GoParkingUITests.swift */,
+				B7044DCA2319242900672F00 /* Info.plist */,
+			);
+			path = GoParkingUITests;
+			sourceTree = "<group>";
+		};
+		B7044DD62319245500672F00 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DB12319242800672F00 /* LaunchScreen.storyboard */,
+				B7044DA92319242500672F00 /* Main.storyboard */,
+				B7044DD923192B8A00672F00 /* Home.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B7044DD72319247200672F00 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DA52319242500672F00 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B7044DDB2319453800672F00 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DE92319489F00672F00 /* TPKeyboardAvoiding */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B7044DE92319489F00672F00 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DEA2319489F00672F00 /* TPKeyboardAvoidingScrollView.h */,
+				B7044DEB2319489F00672F00 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				B7044DEC2319489F00672F00 /* TPKeyboardAvoidingScrollView.m */,
+				B7044DED2319489F00672F00 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				B7044DF0231948C200672F00 /* BridgingHeader.h */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		B7044DF123194B3700672F00 /* AppController */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DF223194B4800672F00 /* LoginSignUpModule */,
+			);
+			path = AppController;
+			sourceTree = "<group>";
+		};
+		B7044DF223194B4800672F00 /* LoginSignUpModule */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DF423194B6B00672F00 /* Models */,
+				B7044DF323194B5D00672F00 /* Controllers */,
+			);
+			path = LoginSignUpModule;
+			sourceTree = "<group>";
+		};
+		B7044DF323194B5D00672F00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DF523194B9400672F00 /* LoginViewController.swift */,
+				B7044DF723194BA400672F00 /* SignUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B7044DF423194B6B00672F00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7044DF923194DE400672F00 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B7044DFA23194E0E00672F00 /* AppShareData.swift */,
+				B7044DDB2319453800672F00 /* Library */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C43A63CC77C15DABB1AB3A31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDF90EC5D088BF49C1CBDA5D /* Pods-GoParking.debug.xcconfig */,
+				8BF80E46E5464142CE7BE45F /* Pods-GoParking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7044DA12319242500672F00 /* GoParking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7044DCD2319242900672F00 /* Build configuration list for PBXNativeTarget "GoParking" */;
+			buildPhases = (
+				01351DD54B5789E009E85C9F /* [CP] Check Pods Manifest.lock */,
+				B7044D9E2319242500672F00 /* Sources */,
+				B7044D9F2319242500672F00 /* Frameworks */,
+				B7044DA02319242500672F00 /* Resources */,
+				086BA71F3473E04B39A8EC0D /* [CP] Embed Pods Frameworks */,
+				09E6D5BA2A1F1874B73E0CFD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoParking;
+			productName = GoParking;
+			productReference = B7044DA22319242500672F00 /* GoParking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7044DB82319242800672F00 /* GoParkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7044DD02319242900672F00 /* Build configuration list for PBXNativeTarget "GoParkingTests" */;
+			buildPhases = (
+				B7044DB52319242800672F00 /* Sources */,
+				B7044DB62319242800672F00 /* Frameworks */,
+				B7044DB72319242800672F00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7044DBB2319242800672F00 /* PBXTargetDependency */,
+			);
+			name = GoParkingTests;
+			productName = GoParkingTests;
+			productReference = B7044DB92319242800672F00 /* GoParkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7044DC32319242800672F00 /* GoParkingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7044DD32319242900672F00 /* Build configuration list for PBXNativeTarget "GoParkingUITests" */;
+			buildPhases = (
+				B7044DC02319242800672F00 /* Sources */,
+				B7044DC12319242800672F00 /* Frameworks */,
+				B7044DC22319242800672F00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7044DC62319242800672F00 /* PBXTargetDependency */,
+			);
+			name = GoParkingUITests;
+			productName = GoParkingUITests;
+			productReference = B7044DC42319242800672F00 /* GoParkingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7044D9A2319242500672F00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "MAC HD";
+				TargetAttributes = {
+					B7044DA12319242500672F00 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B7044DB82319242800672F00 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B7044DA12319242500672F00;
+					};
+					B7044DC32319242800672F00 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B7044DA12319242500672F00;
+					};
+				};
+			};
+			buildConfigurationList = B7044D9D2319242500672F00 /* Build configuration list for PBXProject "GoParking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7044D992319242500672F00;
+			productRefGroup = B7044DA32319242500672F00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7044DA12319242500672F00 /* GoParking */,
+				B7044DB82319242800672F00 /* GoParkingTests */,
+				B7044DC32319242800672F00 /* GoParkingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7044DA02319242500672F00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7044DB32319242800672F00 /* LaunchScreen.storyboard in Resources */,
+				B7044DB02319242800672F00 /* Assets.xcassets in Resources */,
+				B7044DAB2319242500672F00 /* Main.storyboard in Resources */,
+				B7044DDA23192B8A00672F00 /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7044DB72319242800672F00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7044DC22319242800672F00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01351DD54B5789E009E85C9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoParking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		086BA71F3473E04B39A8EC0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoParking/Pods-GoParking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoParking/Pods-GoParking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoParking/Pods-GoParking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		09E6D5BA2A1F1874B73E0CFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoParking/Pods-GoParking-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoParking/Pods-GoParking-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoParking/Pods-GoParking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7044D9E2319242500672F00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7044DFB23194E0E00672F00 /* AppShareData.swift in Sources */,
+				B7044DF623194B9400672F00 /* LoginViewController.swift in Sources */,
+				B7044DF823194BA400672F00 /* SignUpViewController.swift in Sources */,
+				B7044DAE2319242500672F00 /* GoParking.xcdatamodeld in Sources */,
+				B7044DEF2319489F00672F00 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				B7044DEE2319489F00672F00 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				B7044DA62319242500672F00 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7044DB52319242800672F00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71DCED9232A46B700D1B89A /* GoParkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7044DC02319242800672F00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7044DC92319242900672F00 /* GoParkingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7044DBB2319242800672F00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7044DA12319242500672F00 /* GoParking */;
+			targetProxy = B7044DBA2319242800672F00 /* PBXContainerItemProxy */;
+		};
+		B7044DC62319242800672F00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7044DA12319242500672F00 /* GoParking */;
+			targetProxy = B7044DC52319242800672F00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7044DA92319242500672F00 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7044DAA2319242500672F00 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7044DB12319242800672F00 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7044DB22319242800672F00 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7044DCB2319242900672F00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7044DCC2319242900672F00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7044DCE2319242900672F00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDF90EC5D088BF49C1CBDA5D /* Pods-GoParking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoParking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gammaStack.GoParking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7044DCF2319242900672F00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF80E46E5464142CE7BE45F /* Pods-GoParking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoParking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gammaStack.GoParking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B7044DD12319242900672F00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoParkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gammaStack.GoParkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoParking.app/GoParking";
+			};
+			name = Debug;
+		};
+		B7044DD22319242900672F00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoParkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gammaStack.GoParkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoParking.app/GoParking";
+			};
+			name = Release;
+		};
+		B7044DD42319242900672F00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoParkingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gammaStack.GoParkingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoParking;
+			};
+			name = Debug;
+		};
+		B7044DD52319242900672F00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoParkingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gammaStack.GoParkingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoParking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7044D9D2319242500672F00 /* Build configuration list for PBXProject "GoParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7044DCB2319242900672F00 /* Debug */,
+				B7044DCC2319242900672F00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7044DCD2319242900672F00 /* Build configuration list for PBXNativeTarget "GoParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7044DCE2319242900672F00 /* Debug */,
+				B7044DCF2319242900672F00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7044DD02319242900672F00 /* Build configuration list for PBXNativeTarget "GoParkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7044DD12319242900672F00 /* Debug */,
+				B7044DD22319242900672F00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7044DD32319242900672F00 /* Build configuration list for PBXNativeTarget "GoParkingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7044DD42319242900672F00 /* Debug */,
+				B7044DD52319242900672F00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B7044DAC2319242500672F00 /* GoParking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B7044DAD2319242500672F00 /* GoParking.xcdatamodel */,
+			);
+			currentVersion = B7044DAD2319242500672F00 /* GoParking.xcdatamodel */;
+			path = GoParking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B7044D9A2319242500672F00 /* Project object */;
+}

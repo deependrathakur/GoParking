@@ -1,0 +1,6 @@
+framework module Pods_GoParking {
+  umbrella header "Pods-GoParking-umbrella.h"
+
+  export *
+  module * { export * }
+}
