@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class SignUpViewController: UIViewController{
     //MARK: - Outlet connection
     @IBOutlet weak var imageUserProfile:UIImageView!
     @IBOutlet weak var txtEmail:UITextField!
@@ -26,7 +26,6 @@ class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePicker.delegate = self
-    
     }
 }
 
@@ -72,7 +71,7 @@ fileprivate extension SignUpViewController{
             }else if txtConfirmPassword.text?.count == 0{
                 objAppShareData.shakeTextField(txtConfirmPassword)
             }else if txtConfirmPassword.text != txtPassword.text{
-                objAppShareData.alertController(objVievController: self, message: "ConfirmPassword not currect")
+                objAppShareData.alertController(objVievController: self, message: "Confirm password not currect")
             }else{
                 
             }
@@ -80,16 +79,16 @@ fileprivate extension SignUpViewController{
 }
 
 //MARK: Image picker method
-fileprivate extension SignUpViewController{
+extension SignUpViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func selectProfileImage() {
         let selectImage = UIAlertController(title: "Select Profile Image", message: nil, preferredStyle: .actionSheet)
         let btn0 = UIAlertAction(title: "Cancel", style: .cancel, handler: {(_ action: UIAlertAction) -> Void in
         })
         let btn1 = UIAlertAction(title: "Camera", style: .default, handler: {(_ action: UIAlertAction) -> Void in
-            self.selectImageFromCamera()
+            self.openCamera11()
         })
         let btn2 = UIAlertAction(title: "Photo Library", style: .default, handler: {(_ action: UIAlertAction) -> Void in
-            self.checkPhotoLibraryPermission()
+            self.openGallery11()
         })
         selectImage.addAction(btn0)
         selectImage.addAction(btn1)
@@ -98,100 +97,54 @@ fileprivate extension SignUpViewController{
     }
     
     
-    func checkPhotoLibraryPermission() {
-        let status = PHPhotoLibrary.authorizationStatus()
-        switch status {
-        case .authorized:
-            //handle authorized status
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-                self.imagePicker.sourceType = .photoLibrary
-                //  self.imagePicker.allowsEditing = true;
-                self.present(self.imagePicker, animated: true)
+//  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//    if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+//        self.imageUserProfile.image = image
+//    }
+//    self.imagePicker.dismiss(animated: true, completion: nil)
+//    imagePicker.dismiss(animated: false)
+//
+//  }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            imagePicker.dismiss(animated: false)
+
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+                self.imageUserProfile.image = image
             }
-        //self.openGallary()
-        case .denied, .restricted :
-            //handle denied status
-            let alert = UIAlertController(title: "Unable to access the Gallary",
-                                          message: "To enable access, go to Settings > Privacy > Gallary and turn on Gallary access for this app.",
-                                          preferredStyle: UIAlertController.Style.alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(okAction)
-            
-            let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: { _ in
-                
-                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-                if UIApplication.shared.canOpenURL(settingsUrl) {
-                    UIApplication.shared.open(settingsUrl, completionHandler: { (success)
-                        in
-                        
-                    })
-                }
-            })
-            alert.addAction(settingsAction)
-            
-            present(alert, animated: true, completion: nil)
-        case .notDetermined:
-            // ask for permissions
-            PHPhotoLibrary.requestAuthorization() { status in
-                switch status {
-                case .authorized: break
-                // as above
-                case .denied, .restricted: break
-                // as above
-                case .notDetermined: break
-                    // won't happen but still
-                }
-            }
-        }
+            self.imagePicker.dismiss(animated: true, completion: nil)
     }
     
+    func openCamera11() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+              let imagePicker = UIImagePickerController()
+              imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+              imagePicker.allowsEditing = false
+              self.present(imagePicker, animated: true, completion: nil)
+          } else {
+              let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+          }
+      }
     
-    func selectImageFromCamera() //to Access Camera
-    {
-        let authStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
-        if authStatus == AVAuthorizationStatus.denied {
-            
-            let alert = UIAlertController(title: "Unable to access the Camera",
-                                          message: "To enable access, go to Settings > Privacy > Camera and turn on Camera access for this app.",
-                                          preferredStyle: UIAlertController.Style.alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(okAction)
-            
-            let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: { _ in
-                
-                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-                if UIApplication.shared.canOpenURL(settingsUrl) {
-                    UIApplication.shared.open(settingsUrl, completionHandler: { (success)
-                        in
-                        
-                    })
-                }
-            })
-            alert.addAction(settingsAction)
-            
-            present(alert, animated: true, completion: nil)
-        }
-        else if (authStatus == AVAuthorizationStatus.notDetermined) {
-            
-            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted) in
-                if granted {
-                    DispatchQueue.main.async {
-                        self.imagePicker.sourceType = UIImagePickerController.SourceType.camera
-                    }
-                }
-            })
+    func openGallery11() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
         } else {
-            if UIImagePickerController.isSourceTypeAvailable(.camera){
-                self.imagePicker.sourceType = .camera
-                //self.imagePicker.allowsEditing = false;
-                self.present(self.imagePicker, animated: true)
-            }
-            
+            let alert  = UIAlertController(title: "Warning", message: "You don't have permission to access gallery.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
-        
     }
+   
 }
 
 //MARK: ------
